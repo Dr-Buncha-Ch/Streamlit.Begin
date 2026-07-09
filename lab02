@@ -54,3 +54,35 @@ name = st.text_input("ชื่อผู้จอง")
 room = st.selectbox("ห้อง", ["A", "B", "C"])
 if st.button("บันทึก"):
   st.success(f"จองห้อง {room} โดย {name}")
+
+#3. Table
+
+import pandas as pd
+
+df = pd.DataFrame({
+  "ชื่อ": ["สมชาย", "สมหญิง"],
+  "ห้อง": ["A", "B"]
+})
+
+st.dataframe(df)
+
+#4. miniProject1
+
+import streamlit as st
+import pandas as pd
+
+st.title("Meeting Room Booking")
+name1 = st.text_input("ชื่อผู้จอง" , key="name1")
+room1 = st.selectbox("เลือกห้อง", ["A", "B", "C"])
+date = st.date_input("วันที่จอง")
+
+if st.button("บันทึกการจอง"):
+    data = pd.DataFrame({
+        "ชื่อ": [name1],
+        "ห้อง": [room1],
+        "วันที่": [date]
+    })
+
+    st.success("บันทึกสำเร็จ")
+    st.dataframe(data)
+
