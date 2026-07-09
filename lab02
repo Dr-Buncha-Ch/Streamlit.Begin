@@ -31,5 +31,26 @@ streamlit run main.py
   Help agents write better Streamlit apps?
   Install the official Streamlit skills by running streamlit skills in your terminal.
 
-#Tags
-7. 
+----------------------------------------------------------------------------------------------------
+#Streamlit พื้นฐาน
+เข้าใจ
+
+st.title() = หัวเรื่อง
+st.text_input() = ช่องกรอกข้อมูล
+st.button() = ปุ่ม
+st.success() = แจ้งผลสำเร็จ
+
+-----------------------------------------
+#1. button
+
+import streamlit as st
+st.title("My First Web")
+st.write("สวัสดี Streamlit")
+st.button("Click")
+
+#2. Form
+
+name = st.text_input("ชื่อผู้จอง")
+room = st.selectbox("ห้อง", ["A", "B", "C"])
+if st.button("บันทึก"):
+  st.success(f"จองห้อง {room} โดย {name}")
