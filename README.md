@@ -168,7 +168,7 @@ st.write("Welcome to Streamlit")
 
 ---
 
-รันโปรแกรม
+รันโปรแกรม ด้วย Terminal 
 
 ```bash
 streamlit run hello.py
