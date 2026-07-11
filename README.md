@@ -119,35 +119,47 @@ B. เปิด Terminal ภายในโฟลเดอร์
 C. สร้าง Virtual Environment
 
 Windows
+---
 python -m venv .venv
+---
 
 หรือ
 
+---
 py -m venv .venv
+---
 
 macOS
+---
 python3 -m venv .venv
+---
 
 Linux
+---
 python3 -m venv .venv
+---
 
 D. เปิดใช้งาน Virtual Environment
 
 Windows (PowerShell)
+---
 .venv\Scripts\Activate.ps1
+---
 
 Windows (Command Prompt)
+---
 .venv\Scripts\activate.bat
+---
 
 macOS
+---
 source .venv/bin/activate
+---
 
 Linux
+---
 source .venv/bin/activate
-
-
-
-
+---
 
 
 # ขั้นตอนที่ 3 ติดตั้ง Streamlit
