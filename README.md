@@ -104,6 +104,52 @@ pip 25.1.1 from ...
 
 ---
 
+# 🐍 ขั้นตอนการสร้าง Virtual Environment (venv)
+Virtual Environment (venv) คือสภาพแวดล้อมแยกสำหรับแต่ละโปรเจกต์ Python ทำให้สามารถติดตั้งไลบรารีเฉพาะโปรเจกต์ได้ โดยไม่กระทบกับ Python หลักของเครื่อง
+ข้อดีของ Virtual Environment
+✅ แยกไลบรารีของแต่ละโปรเจกต์
+✅ ป้องกันปัญหาเวอร์ชันของไลบรารีชนกัน
+✅ แชร์โปรเจกต์ให้ผู้อื่นได้ง่าย
+✅ ใช้งานร่วมกับ GitHub ได้สะดวก
+✅ เป็นมาตรฐานในการพัฒนาโปรแกรม Python
+
+มีขั้นตอนดังนี้
+A. เปิดโฟลเดอร์โปรเจกต์
+B. เปิด Terminal ภายในโฟลเดอร์
+C. สร้าง Virtual Environment
+
+Windows
+python -m venv .venv
+
+หรือ
+
+py -m venv .venv
+
+macOS
+python3 -m venv .venv
+
+Linux
+python3 -m venv .venv
+
+D. เปิดใช้งาน Virtual Environment
+
+Windows (PowerShell)
+.venv\Scripts\Activate.ps1
+
+Windows (Command Prompt)
+.venv\Scripts\activate.bat
+
+macOS
+source .venv/bin/activate
+
+Linux
+source .venv/bin/activate
+
+
+
+
+
+
 # ขั้นตอนที่ 3 ติดตั้ง Streamlit
 
 สามารถติดตั้งได้ 2 วิธี
@@ -143,6 +189,7 @@ Streamlit, version 1.xx.x
 ```
 
 ---
+
 
 # ขั้นตอนที่ 5 ทดสอบว่าใช้งานได้
 - สร้าง โฟลเดอร์  
