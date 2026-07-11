@@ -1,0 +1,198 @@
+จุดที่ 1 : เพิ่ม CSS Function หลัง import
+จุดที่ 2 : เรียกใช้ใน main()
+
+
+
+import streamlit as st
+import pandas as pd
+
+
+# -----------------------------
+# CSS Design
+# -----------------------------
+def load_css():
+
+    st.markdown("""
+    <style>
+
+  	/* Sidebar Background Image */
+
+
+
+    /* ทำให้ข้อความ Sidebar อ่านง่าย */
+
+
+
+
+    /* หัวข้อหลัก */
+    h1 {
+        color: #1f77b4;
+        text-align: center;
+    }
+
+
+    /* หัวข้อย่อย */
+    h2 {
+        color: #2e8b57;
+    }
+
+
+    /* ปุ่ม */
+    .stButton button {
+
+        background-color: #1f77b4;
+
+        color: white;
+
+        border-radius: 10px;
+
+        height: 40px;
+
+        font-size: 16px;
+
+    }
+
+
+    /* ตอนเอาเมาส์ชี้ปุ่ม */
+    .stButton button:hover {
+
+        background-color: #0b5394;
+
+        color: yellow;
+
+    }
+
+
+    /* ช่องกรอกข้อมูล */
+    .stTextInput input {
+
+        border-radius: 10px;
+
+    }
+
+
+    /* Sidebar */
+    section[data-testid="stSidebar"] {
+
+        background-color: #eaf4ff;
+
+    }
+
+
+    /* ตาราง */
+    div[data-testid="stDataFrame"] {
+
+        border-radius: 10px;
+
+    }
+
+
+    </style>
+    """,
+    unsafe_allow_html=True)
+
+
+-------------------------------------------------------------
+จุดที่ 2 : เรียกใช้ใน main() แก้เป็น
+
+def main():
+
+    st.set_page_config(
+        page_title="Student Task Manager",
+        page_icon="📋",
+        layout="wide"
+    )
+
+
+    # โหลด CSS
+    load_css()
+
+
+    init_data()
+
+
+
+## แบบฝึกหัด
+
+#1. เปลี่ยนสี Sidebar / เปลี่ยนสีปุ่ม  จาก https://www.w3schools.com/colors/colors_names.asp
+
+#2. เพิ่มสีพื้นหลังหน้าเว็บ 
+.main {
+    background-color:#f8f9fa;
+}
+
+#3. เติมภาพพื้นหลัง    หารูปมาเปลี่ยน เช่น 
+    /* Sidebar Background Image */
+    section[data-testid="stSidebar"] {
+
+        background-image: url(
+        "https://images.unsplash.com/photo-1516321318423-f06f85e504b3"
+        );
+
+        background-size: cover;
+
+        background-position: center;
+
+    }
+
+
+    /* ทำให้ข้อความ Sidebar อ่านง่าย */
+    section[data-testid="stSidebar"] * {
+
+        color: white;
+
+    }
+
+
+#4. ใส่ Logo ด้านบน Menu
+    เพิ่มใน main() ก่อน selectbox
+
+
+st.sidebar.image(
+    "https://static.vecteezy.com/system/resources/thumbnails/022/418/057/small_2x/project-task-management-and-effective-time-planning-tools-project-development-icon-3d-vector-illustration-png.png",
+    width=250
+)
+
+st.sidebar.title(
+    "Student Manager"
+)
+
+	ลองเปลี่ยนโลโก้
+
+
+
+#5 เพิ่ม Function Footer   วางไว้ก่อนส่วน # Main Program  
+
+
+# -----------------------------
+# Footer
+# -----------------------------
+def footer():
+
+    st.markdown("""
+    <hr>
+
+    <div style="
+        text-align:center;
+        color:gray;
+        font-size:14px;
+    ">
+
+        Powered by 
+        Team name :
+        
+        Student Development Team
+
+    </div>
+
+    """,
+    unsafe_allow_html=True)
+
+
+เรียกใช้ใน ท้ายโปรแกรม ก่อน DEBUG
+
+# แสดง Footer ทุกหน้า
+footer()
+
+เติมชื่อทีม แทน Team name :
+
